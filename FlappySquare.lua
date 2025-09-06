@@ -133,7 +133,7 @@ function onTick()
 
 		rectangleX,rectanglePositionReset=obstacleX(gameMode~="Game")
 		rectangleY=obstacleY(rectanglePositionReset)
-		gap=round(linearInterpolation(score,0,999,10,5))
+		gap=round(linearInterpolation(score,0,999,10,8))
 
 		collision=collisionDetection(1,round(playerY),round(rectangleX),rectangleY,rectangleY+gap)
 	end
@@ -157,4 +157,5 @@ function onDraw()
 		screen.drawRectF(1,playerY,3,3)
 		screen.drawText(16,1,string.format("%03d",score))
 	end
+
 end
